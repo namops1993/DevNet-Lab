@@ -14,5 +14,6 @@ def make_connect(router):
 
 if __name__ == "__main__":
     net_connect = make_connect(router_info)
-    output = net_connect.send_command('show ip int brief')
+    net_connect.enable()
+    output = net_connect.send_command('show run')
     print(output)
